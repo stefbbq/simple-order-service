@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Treez Test: Handy Dandy Test Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Treez Take Home Interview Problem</h1>
+    <hr />
+
+    <div class="heading">
+      <h3>Inventory</h3>
+      <a href="/inventories"><button>See complete inventory</button></a>
+    </div>
+
+    <div class="collection">
+      <form action="/inventories" method="POST">
+        <input type="text" placeholder="name" name="name" required />
+        <input type="text" placeholder="description" name="description" required />
+        <input type="number" placeholder="price" name="price" required />
+        <input type="number" placeholder="quantity" name="quantity" required />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <hr />
+    <div class="heading">
+      <h3>Orders</h3>
+      <a href="/orders"><button>See all orders</button></a>
+    </div>
+
+    <div class="collection">
+      <form action="/orders" method="POST">
+        <input type="email" placeholder="email" name="email" required />
+        <p>Inventory items (not dynamic):</p>
+        <select name="items" size="5" multiple required>
+          <option value="Lightsaber">Lightsaber</option>
+          <option value="Blaster">Blaster</option>
+          <option value="Wayfinder">Wayfinder</option>
+          <option value="Data Disk">Data Disk</option>
+          <option value="Chak Juice">Chak Juice</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

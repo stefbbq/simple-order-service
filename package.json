@@ -1,0 +1,40 @@
+{
+  "name": "treez-order-service",
+  "version": "1.0.0",
+  "description": "A simple order service with inventory powered by Node and MongoDB",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
+    "watch:serve": "tsc && export $(cat .env | xargs) && ./node_modules/.bin/nodemon dist/app.js",
+    "build": "tsc",
+    "start": "tsc && export $(cat .env | xargs) && node dist/app.js",
+    "test": "tsc && export $(cat .env | xargs) && mocha dist/tests"
+  },
+  "author": "Stefan Soc",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mocha": "^6.2.2",
+    "mongodb": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/express": "^4.17.2",
+    "@types/mocha": "^5.2.7",
+    "@types/mongoose": "^5.5.36",
+    "mocha-typescript": "^1.1.17",
+    "mock-req-res": "^1.1.4",
+    "mongoose": "^5.8.3",
+    "nodemon": "^2.0.2",
+    "sinon": "^8.0.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  }
+}
