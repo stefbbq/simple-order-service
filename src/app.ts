@@ -26,7 +26,6 @@ mongoose.connection.on('error', err => {
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-// app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
 app.use('/inventories', inventoryRouter)
 app.use('/orders', orderRouter)
 app.get('/styles.css', (req, res) => res.sendFile(`${__dirname}/styles.css`))

@@ -1,5 +1,5 @@
 {
-  "name": "treez-order-service",
+  "name": "node-express-mongoose-mocha-chai-basic-order-service",
   "version": "1.0.0",
   "description": "A simple order service with inventory powered by Node and MongoDB",
   "main": "index.js",
